@@ -11,7 +11,6 @@
 }
 
 .editor-container {
-    margin: 20px auto 20px auto;
     border-radius: 2px;
     max-width: 600px;
     color: #000;
@@ -21,7 +20,6 @@
     text-align: left;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    border: 1px solid #ccc;
 }
 
 .editor-inner {
@@ -39,6 +37,7 @@
     outline: 0;
     padding: 15px 10px;
     caret-color: #444;
+    border: 1px solid #ccc;
 }
 
 .editor-placeholder {
