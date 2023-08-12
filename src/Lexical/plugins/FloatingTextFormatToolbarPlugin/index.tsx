@@ -9,7 +9,10 @@
 import './index.css';
 
 import { $isCodeHighlightNode } from '@lexical/code';
-import { $isLinkNode, TOGGLE_LINK_COMMAND } from '@lexical/link';
+import {
+    $isLinkNode,
+    // TOGGLE_LINK_COMMAND
+} from '@lexical/link';
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
 import { mergeRegister } from '@lexical/utils';
 import {
@@ -31,7 +34,7 @@ import { setFloatingElemPosition } from '../../utils/setFloatingElemPosition';
 function TextFormatFloatingToolbar({
     editor,
     anchorElem,
-    isLink,
+    // isLink,
     isBold,
     isItalic,
     isUnderline,
@@ -53,13 +56,13 @@ function TextFormatFloatingToolbar({
 }): JSX.Element {
     const popupCharStylesEditorRef = useRef<HTMLDivElement | null>(null);
 
-    const insertLink = useCallback(() => {
-        if (!isLink) {
-            editor.dispatchCommand(TOGGLE_LINK_COMMAND, 'https://');
-        } else {
-            editor.dispatchCommand(TOGGLE_LINK_COMMAND, null);
-        }
-    }, [editor, isLink]);
+    // const insertLink = useCallback(() => {
+    //     if (!isLink) {
+    //         editor.dispatchCommand(TOGGLE_LINK_COMMAND, 'https://');
+    //     } else {
+    //         editor.dispatchCommand(TOGGLE_LINK_COMMAND, null);
+    //     }
+    // }, [editor, isLink]);
 
     function mouseMoveListener(e: MouseEvent) {
         if (
@@ -236,13 +239,13 @@ function TextFormatFloatingToolbar({
                         aria-label="Insert code block">
                         <i className="format code" />
                     </button>
-                    <button
+                    {/* <button
                         type="button"
                         onClick={insertLink}
                         className={'popup-item spaced ' + (isLink ? 'active' : '')}
                         aria-label="Insert link">
                         <i className="format link" />
-                    </button>
+                    </button> */}
                 </>
             )}
         </div>
